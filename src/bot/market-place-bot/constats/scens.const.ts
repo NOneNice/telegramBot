@@ -1,0 +1,2 @@
+export const MAIN_SCENE = 'MAIN_SCENE';
+export const AUTHORIZATION_SCENE = 'AUTHORIZATION_SCENE';
