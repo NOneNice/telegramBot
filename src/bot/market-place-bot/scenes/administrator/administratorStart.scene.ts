@@ -2,6 +2,7 @@ import { Ctx, On, Scene, SceneEnter } from 'nestjs-telegraf';
 import {
   ADMINISTRATION_START_SCENE,
   EDIT_ADMINISTRATORS_SCENE,
+  EDIT_PRODUCT_SCENE,
   MAIN_SCENE,
 } from '../../constats/scens.const';
 import { ContextType } from '../../../types/context.type';
@@ -10,7 +11,7 @@ import {
   BACK_TO_MAIN_MENU,
   CHOOSE_ONE_OF_THE_SUGGESTED_ACTIONS,
   EDIT_ADMINISTRATORS,
-  EDIT_COTTAGES,
+  EDIT_PRODUCT,
 } from '../../constats/message.const';
 import { getMessageText } from '../../../utilites/getMessage';
 
@@ -23,7 +24,7 @@ export class AdministratorStartScene {
         resize_keyboard: true,
         keyboard: [
           [{ text: EDIT_ADMINISTRATORS }],
-          [{ text: EDIT_COTTAGES }],
+          [{ text: EDIT_PRODUCT }],
           [{ text: BACK_TO_MAIN_MENU }],
         ],
       },
@@ -37,9 +38,9 @@ export class AdministratorStartScene {
       case EDIT_ADMINISTRATORS:
         await ctx.scene.enter(EDIT_ADMINISTRATORS_SCENE);
         break;
-      // case EDIT_COTTAGES:
-      //   await ctx.scene.enter(EDIT_COTTAGES_SCENE);
-      //   break;
+      case EDIT_PRODUCT:
+        await ctx.scene.enter(EDIT_PRODUCT_SCENE);
+        break;
       case BACK_TO_MAIN_MENU:
         await ctx.scene.enter(MAIN_SCENE);
         break;

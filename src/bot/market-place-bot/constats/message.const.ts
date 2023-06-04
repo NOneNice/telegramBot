@@ -11,12 +11,15 @@ export const ADMINISTRATION = 'Администрирование';
 export const SAVE_MESSAGE = 'Сохранить';
 export const AUTHORIZATION = 'Авторизация';
 export const EDIT_ADMINISTRATORS = 'Редактировать администраторов';
-export const EDIT_COTTAGES = 'Редактировать коттеджи';
-export const ADD_NEW_COTTAGE = 'Добавить коттедж';
-export const ADD_NEW_COTTAGE_DESCRIPTION_KEYBOARD = 'Добавить описание';
-export const ADD_NEW_COTTAGE_PHOTOS_KEYBOARD = 'Добавить фото';
-export const ADD_NEW_COTTAGE_GUESTS_KEYBOARD = 'Добавить количество гостей';
-export const SELECT_AN_COTTAGE = 'Выбрать коттедж';
+export const EDIT_PRODUCT = 'Редактировать товар';
+
+export const ADD_NEW_PRODUCT_DESCRIPTION_KEYBOARD =
+  'Добавить описание к товару';
+
+export const ADD_NEW_PRICE_GUESTS_KEYBOARD = 'Добавить цену товара';
+
+export const ADD_NEW_PRODUCT_PHOTOS_KEYBOARD = 'Добавить новое фото товара';
+
 export const ADD_ADMINISTRATOR = 'Добавить администратора';
 export const REMOVE_ADMINISTRATOR = 'Удалить администратора';
 
@@ -28,3 +31,5 @@ export const ADMIN_AUTHORIZATION_SUCCESSFULLY =
 
 export const TYPE_AN_ADMIN_NUMBER =
   'Введите номер телефона администратора в формате 79XX XXX XX XX';
+
+export const ADD_NEW_COTTAGE_PHOTOS = 'Отправьте до 10 фото товара;';
