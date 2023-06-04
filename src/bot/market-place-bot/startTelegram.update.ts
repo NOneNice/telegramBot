@@ -12,9 +12,9 @@ export class StartTelegramUpdate {
     const findUser = await this.userService.findOneByTelegramId(
       ctx.message.from.id,
     );
-
     if (!!findUser) {
-      return await ctx.reply(MAIN_SCENE);
+      ctx.session['user'] = findUser;
+      await ctx.scene.enter(MAIN_SCENE);
     } else {
       await ctx.scene.enter(AUTHORIZATION_SCENE);
     }

@@ -22,7 +22,7 @@ export class AuthorizationScene {
   @On('contact')
   async phone(@Ctx() ctx) {
     const contact = ctx.message.contact;
-    await this.userService.addUser({
+    ctx.session['user'] = await this.userService.addUser({
       phoneNumber: contact.phone_number,
       role: 'user',
       firstName: contact.first_name,
